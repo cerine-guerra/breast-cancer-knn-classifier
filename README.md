@@ -19,3 +19,37 @@ The project includes:
 ---
 
 ## 🗂 Repository Structure
+
+
+---
+
+## ⚡ How to Use
+
+1. **Clone the repository**
+
+```bash
+git clone https://github.com/YOUR_USERNAME/breast-cancer-knn.git
+cd breast-cancer-knn
+
+
+
+
+Install dependencies
+
+pip install -r requirements.txt
+
+3 - load the model in python
+import joblib
+import numpy as np
+
+# Load saved model and scaler
+model = joblib.load("model/knn_model.pkl")
+scaler = joblib.load("model/scaler.pkl")
+
+# Example new patient (replace with real feature values)
+new_data = np.array([[value1, value2, ..., value30]])
+new_data_scaled = scaler.transform(new_data)
+
+# Predict
+prediction = model.predict(new_data_scaled)
+print("Prediction:", "Benign" if prediction[0]==0 else "Malignant")
