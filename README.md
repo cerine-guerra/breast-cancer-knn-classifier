@@ -53,7 +53,7 @@ print("Prediction:", "Benign" if prediction[0]==0 else "Malignant")
 
 📊 Results
 
-Validation Accuracy: 94%
+Validation Accuracy: 93%
 
 Balanced precision and recall for both classes
 
