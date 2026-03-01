@@ -27,11 +27,8 @@ The project includes:
 
 1. **Clone the repository**
 
-```bash
 git clone https://github.com/YOUR_USERNAME/breast-cancer-knn.git
 cd breast-cancer-knn
-
-
 
 
 Install dependencies
@@ -53,3 +50,23 @@ new_data_scaled = scaler.transform(new_data)
 # Predict
 prediction = model.predict(new_data_scaled)
 print("Prediction:", "Benign" if prediction[0]==0 else "Malignant")
+
+📊 Results
+
+Validation Accuracy: 94%
+
+Balanced precision and recall for both classes
+
+Confusion matrix and PCA visualization included in the notebook
+
+🛠 Requirements
+
+Python 3.8+
+
+numpy, pandas, scikit-learn, imbalanced-learn, matplotlib, joblib
+
+📌 Notes
+
+The model was trained using oversampled training data to improve minority class prediction.
+
+Scaling is important: always use the provided scaler.pkl before making predictions.
